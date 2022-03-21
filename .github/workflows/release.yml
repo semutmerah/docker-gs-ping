@@ -41,7 +41,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.JFROG_ARTIFACT_ADDRESS }}/${{ github.event.repository.name }}:${{ github.event.release.tag_name }}
+          tags: ${{ secrets.JFROG_ARTIFACT_ADDRESS }}/${{ github.event.repository.name }}:1.0.0
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
